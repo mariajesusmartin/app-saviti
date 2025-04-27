@@ -37,7 +37,7 @@ import UpdateForm from '../UpdateForm/UpdateForm'
 const Cart =()=>{
 
     // Importación de variables de entorno
-    const {VITE_USERMEALS}= import.meta.env
+    const API_URL = `${import.meta.env.VITE_API}/meals`
     // Función para variable de entorno con parámetros
     const baseUrlUserMeals = import.meta.env.VITE_USERMEALS
 
@@ -69,7 +69,7 @@ const Cart =()=>{
             signal: controller.signal
         }
 
-        await fetch(VITE_USERMEALS, options)
+        await fetch(API_URL, options)
         .then(res => res.json())
         .then(data =>setCreatedMeals(data))
         .catch(err=>console.log(err))
