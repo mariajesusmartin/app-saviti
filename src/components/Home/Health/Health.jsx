@@ -25,8 +25,8 @@ const Health = () => {
                 {/* Imagen de fondo */}
                 <div className="Health-background">
                 <picture>
-                    <source srcSet="/public/assets/main-images/bols-de-comidas.webp" type="image/jpg"/>
-                    <img src="/public/assets/main-images/bols-de-comidas.jpg" alt="background" className="Health-img" />
+                    <source srcSet="/assets/main-images/bols-de-comidas.webp" type="image/jpg"/>
+                    <img src="/assets/main-images/bols-de-comidas.jpg" alt="background" className="Health-img" />
                 </picture>
                 </div>
                 {/*Título y texto de la portada con botón hacia la página "Nuestros platos"*/}
