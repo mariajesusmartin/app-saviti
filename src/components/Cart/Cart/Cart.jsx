@@ -134,7 +134,7 @@ const Cart =()=>{
             amount: Number(amountInput.value)
         }
 
-        const urlMealsId = `${baseUrlUserMeals}/user-meals/${update-id}`
+        const urlMealsId = `${baseUrlUserMeals}/user-meals/${update.id}`
 
         let controller = new AbortController()
         let options = {
@@ -144,7 +144,7 @@ const Cart =()=>{
             body: JSON.stringify(update)
         }
 
-        await fetch(urlUserMealsId, options)
+        await fetch(urlMealsId, options)
             .then(res=>res.json())
             .then(data =>
                 setCreatedMeals(data),
@@ -164,8 +164,8 @@ const Cart =()=>{
         <div className="CartCover">
             {/* Imagen de fondo de la portada*/}
             <picture className='CartCover-background'>
-                <source srcSet="/public/assets/main-images/mesa-madera.webp" type="image/jpg"/>
-                <img src="/public/assets/main-images/mesa-madera.jpg" alt="Imagen de fondo mesa de madera" className="CartCover-img" />
+                <source srcSet="/assets/main-images/mesa-madera.webp" type="image/jpg"/>
+                <img src="/assets/main-images/mesa-madera.jpg" alt="Imagen de fondo mesa de madera" className="CartCover-img" />
             </picture>
             {/* Título de la página */}
             <h1 className="CartCover-h1">Lista de platos seleccionados y creados</h1>
