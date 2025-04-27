@@ -16,6 +16,7 @@
 *_______________________________*/
 
 import './Action.css'
+import { NavLink } from 'react-router-dom'
 
 
 /**
@@ -56,11 +57,11 @@ const Links =()=>{
         <>
         {/* Enlace 1: ir a "Nuestros platos" */}
         <li className="Action-li">
-            <a href={'/nuestros-platos'} title="Ir a la página de nuestros platos" className="Action-a Button">Ver los platos</a>
+            <button className="Action-a Button" title="Ir a la página de nuestros platos"><NavLink to={'/nuestros-platos'}>Ver los platos</NavLink></button>
         </li>
         {/* Enlace 2: ir a "Iniciar sesión" */}
         <li className="Action-li">
-            <a href={'/login'} title="Ir a la página de inicio de sesión" className="Action-a Button">Iniciar sesión</a>
+            <button className="Action-a Button" title="Ir a la página de inicio de sesión"><NavLink to={'/login'}>Iniciar sesión</NavLink></button>
         </li>
         </>
     )

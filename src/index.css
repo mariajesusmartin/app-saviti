@@ -76,6 +76,7 @@ body{
 
 .Button{
     box-shadow: 2px 2px 5px rgb(138, 137, 137); /* Sombra para los botones */
+    font-size: 1rem;
 }
 
 .Button:active{
