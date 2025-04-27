@@ -36,8 +36,8 @@ const Operation =()=>{
     // useState para manejar el estado de los pasos
     const [steps,setSteps] = useState([])
 
-    // Importación de variables de entorno
-    const {VITE_BASICSTEPS}= import.meta.env
+    // Función para variable de entorno
+    const baseUrl = import.meta.env.VITE_API
 
     // Función para obtener los datos desde la API
     const operationData = async()=>{
@@ -47,7 +47,9 @@ const Operation =()=>{
             signal: controller.signal
         }
 
-        await fetch(VITE_BASICSTEPS, options)
+        const urlBasicSteps = `${baseUrl}/basicsteps`
+
+        await fetch(urlBasicSteps, options)
         .then(res => res.json())
         .then(data => setSteps(data))
         .catch(err=>console.log(err))

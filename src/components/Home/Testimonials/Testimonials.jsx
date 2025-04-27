@@ -33,8 +33,8 @@ const Testimonials =()=>{
     // useState para manejar el estado de los testimonios
     const [testimonials,setTestimonials] = useState([])
 
-    // Importación de variables de entorno
-    const {VITE_TESTIMONIALS}= import.meta.env
+    // Función para variable de entorno
+    const baseUrl = import.meta.env.VITE_API
 
     // Función para obtener los datos desde la API
     const operationData = async () => {
@@ -44,7 +44,9 @@ const Testimonials =()=>{
             signal: controller.signal
         }
 
-        await fetch (VITE_TESTIMONIALS, options)
+        const urlTestimonials = `${baseUrl}/testimonials`
+
+        await fetch (urlTestimonials, options)
         .then(res => res.json())
         .then(data => setTestimonials(data))
         .catch(err => console.log(err))

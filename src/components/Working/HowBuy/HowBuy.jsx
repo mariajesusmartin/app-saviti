@@ -33,8 +33,8 @@ const HowBuy =()=>{
     // useState para manejar el estado de los pasos
     const [steps, setSteps] = useState([])
 
-    // Importación de variables de entorno
-    const {VITE_SPECIFICSTEPS}= import.meta.env
+    // Función para variable de entorno
+    const baseUrl = import.meta.env.VITE_API
 
     // Función para obtener los datos desde la API
     const operationData = async()=>{
@@ -43,8 +43,10 @@ const HowBuy =()=>{
             method: 'get',
             signal: controller.signal
         }
+        
+        const urlStecificSteps = `${baseUrl}/specificsteps`
 
-        await fetch(VITE_SPECIFICSTEPS, options)
+        await fetch(urlStecificSteps, options)
         .then(res => res.json())
         .then(data => setSteps(data))
         .catch(err=>console.log(err))

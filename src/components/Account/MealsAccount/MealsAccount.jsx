@@ -37,7 +37,8 @@ import './MealsAccount.css'
 // Componente principal para renderizar los platos
 const MealsAccount = () =>{    
     
-    const {VITE_MEALS}= import.meta.env
+    // Función para variable de entorno
+    const baseUrl = import.meta.env.VITE_API
 
     // Deconstrucción del contexto global para gestionar estados de carrito y platos
     const {selectedMeals, setSelectedMeals, meals, setMeals} = useContext(ContextCart)
@@ -68,7 +69,9 @@ const MealsAccount = () =>{
             signal: controller.signal
         }
 
-        await fetch(VITE_MEALS, options)
+        const urlMeals = `${baseUrl}/meals`
+
+        await fetch(urlMeals, options)
         .then(res => res.json())
         .then(data => setMeals(data))
         .catch(err=> console.log(err))

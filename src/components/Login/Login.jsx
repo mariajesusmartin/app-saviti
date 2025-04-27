@@ -38,8 +38,8 @@ const Login =()=>{
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
 
-    // Importación de variables de entorno
-    const {VITE_USERS}= import.meta.env
+    // Función para variable de entorno
+    const baseUrl = import.meta.env.VITE_API
 
     // Hook para redirigir al usuario tras iniciar sesión correctamente
     const navigate = useNavigate()
@@ -54,10 +54,12 @@ const Login =()=>{
     const handleSubmit = async(e)=>{
         e.preventDefault()
 
+        const urlUsers = `${baseUrl}/login`
+
         // Configuración para el inicio de sesión
         try{
             // Función para hacer una llamada a una API que contiene las credenciales de los usuarios
-            const response = await fetch(VITE_USERS, {
+            const response = await fetch(urlUsers, {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({email, password})
