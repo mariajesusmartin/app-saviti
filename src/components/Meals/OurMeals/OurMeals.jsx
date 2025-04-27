@@ -38,7 +38,7 @@ const OurMeals =()=>{
     const [meals, setMeals] = useState([])
 
     // Importación de variables de entorno
-    const {VITE_MEALS}= import.meta.env
+    const API_URL = `${import.meta.env.VITE_API}/meals`
 
     // Función para obtener los datos desde la API
     const operationData = async()=>{
@@ -48,7 +48,7 @@ const OurMeals =()=>{
             signal: controller.signal
         }
 
-        await fetch(VITE_MEALS, options)
+        await fetch(API_URL, options)
         .then(res => res.json()
         .then(data => setMeals(data))
         .catch(err=> console.log(err))

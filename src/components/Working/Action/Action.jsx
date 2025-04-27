@@ -17,6 +17,7 @@
 
 import './Action.css'
 
+
 /**
  * Este componente principal muestra los botones de acción para iniciar sesión o ver nuestros platos desde la página "Cómo funciona"
  * 
