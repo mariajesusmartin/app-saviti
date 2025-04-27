@@ -44,8 +44,8 @@ const MyAccount =()=>{
             {/* Imagen de fondo */}
             <div className="MyAccount-background">
                 <picture>
-                    <source srcSet="/public/assets/main-images/ensalada-de-salmon.webp" type="image/jpg"/>
-                    <img src="/public/assets/main-images/ensalada-de-salmon.jpg" alt="Imagen de fondo con una ensalada de salmón ahumado" className="MyAccount-img" />
+                    <source srcSet="/assets/main-images/ensalada-de-salmon.webp" type="image/jpg"/>
+                    <img src="/assets/main-images/ensalada-de-salmon.jpg" alt="Imagen de fondo con una ensalada de salmón ahumado" className="MyAccount-img" />
                 </picture>
             </div>
             {/* Título con nombre de usuario que ha iniciado sesión */}
