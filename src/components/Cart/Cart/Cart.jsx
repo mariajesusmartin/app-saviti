@@ -62,7 +62,7 @@ const Cart =()=>{
     // Función para obtener todos los platos creados por el usuario desde la API
     const getCreatedMeal =async()=>{
 
-        const urlMeals = `${baseUrlUserMeals}/meals`
+        const urlMeals = `${baseUrlUserMeals}/user-meals`
         let controller = new AbortController()
         let options ={
             method: 'get',

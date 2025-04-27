@@ -35,6 +35,8 @@ const CreationForm =()=>{
     // Referencia para leer los valores del formulario
     const addUserMeals = useRef()
 
+    // Función para variable de entorno con parámetros
+    const baseUrlUserMeals = import.meta.env.VITE_API
     /** 
     * Función para manejar los datos del formulario, añadirlos a la API y al carrito
     * 
@@ -56,6 +58,8 @@ const CreationForm =()=>{
         ingredientsInput.value = ''
         amountInput.value = ''
 
+        const urlMeals = `${baseUrlUserMeals}/user-meals`
+
         let controller = new AbortController()
         let options = {
             method: 'post',
@@ -64,7 +68,7 @@ const CreationForm =()=>{
             signal: controller.signal
         }
 
-        await fetch(`http://localhost:3000/user-meals`, options)
+        await fetch(urlMeals, options)
             .then(res => res.json())
             .then(data => {
                 setCreatedMeals([...createdMeals,newMeal]);
