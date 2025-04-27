@@ -1,0 +1,121 @@
+/* 
+Operation.css
+- Operation general
+- Responsive
+*/
+
+/* Operation general
+Descripción: estilos para los pasos generales/básicos para hacer un pedido
+Estructura: 
+- Operation
+- Operation-h2
+- Operation-p
+- Operation-p--title
+- Operation-ul
+- Operation-li
+- Operation-img
+- Operation-h3
+- Operation-a
+*/
+
+.Operation{
+    padding: 6.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+
+    text-align: center;
+}
+
+.Operation-h2{
+    padding: 0 0 1rem 0;
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+.Operation-p{
+    padding: 0 1.25rem;
+}
+.Operation-p--title{
+    padding: 0 9.375rem;
+}
+.Operation-ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    gap: 1.875rem;
+
+}
+.Operation-li{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+}
+.Operation-img{
+    margin: auto;
+    width: 6.25rem;
+}
+.Operation-h3{
+    font-size: 1.125rem;
+    font-weight: var(--font-weight);
+
+}
+.Operation-a{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+
+/* Operation general */
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas con max-width 1024px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .Operation{
+        padding: 4.375rem 3.125rem;
+    }
+    .Operation-h2{
+        font-size: var(--font-h-mobile);
+    }
+
+
+}
+@media (max-width:768px){
+    .Operation{
+        padding: 4.375rem 1.875rem;
+    }
+
+}
+@media (max-width:960px){
+    .Operation-ul{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width:1024px){
+    .Operation-p--title{
+        padding: 0 .625rem;
+    }
+}
+@media (min-width:2000px){
+    .Operation{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */

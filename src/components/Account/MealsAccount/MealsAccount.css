@@ -1,0 +1,174 @@
+/* 
+MealsAccount.css
+- MealsAccount general
+- Responsive
+*/
+
+/* MealsAccount general
+Descripción: estilos para la lista de platos dentro de la página "Mi cuenta"
+Estructura: 
+- MealsAccount
+- MealsAccount-create
+- MealsAccount-h2
+- MealsAccount-button--create
+- MealsAccount-ul
+- MealsAccount-li
+- MealsAccount-img
+- MealsAccount-details
+- MealsAccount-h3
+- MealsAccount-p
+- MealsAccount-extra
+- MealsAccount-price
+- MealsAccount-allergens
+- MealsAccount-allergen
+- MealsAccount-icons
+- MealsAccount-a
+- MealsAccount-button
+- MealsAccount-add
+*/
+
+.MealsAccount{
+    text-align: center;
+    padding: 6.25rem 9.375rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+
+}
+.MealsAccount-create{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.MealsAccount-h2{
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+.MealsAccount-button--create{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+
+.MealsAccount-ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;
+}
+.MealsAccount-li{
+    border: 3px solid var(--color-green);
+    border-radius: var(--border-radius-container);
+}
+.MealsAccount-img{
+    border-top-left-radius: 1.75rem;
+    border-top-right-radius: 1.75rem;
+}
+
+.MealsAccount-details{
+    padding: 1rem;
+}
+.MealsAccount-h3{
+    font-weight: var(--font-weight);
+}
+.MealsAccount-p{
+    font-size: .875rem;
+}
+.MealsAccount-extra{
+    padding: 1.25rem 0 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.MealsAccount-price{
+    font-weight: var(--font-weight);
+}
+.MealsAccount-allergens{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.MealsAccount-allergen{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .625rem;
+}
+.MealsAccount-icons{
+    width: 1.5625rem;
+}
+
+.MealsAccount-a{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: 3.125rem;
+}
+
+.MealsAccount-button{
+    margin: 1.25rem auto auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+}
+.MealsAccount-add{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+/* MealsAccount general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .MealsAccount{
+        padding: 4.375rem 3.125rem;
+    }
+    .MealsAccount-h2{
+        font-size: var(--font-h-mobile);
+    }
+    .MealsAccount-ul{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width:768px){
+    .MealsAccount{
+        padding: 4.375rem;
+    }
+
+}
+@media (max-width:960px){
+    .MealsAccount-ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media (min-width:2000px){
+    .MealsAccount{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */
+
+

@@ -1,0 +1,103 @@
+/* 
+HeaderAccount.css
+- HeaderAccount general
+- Responsive
+*/
+
+/* HeaderAccount general
+Descripción: estilos para el header especial al iniciar sesión
+Estructura: 
+- HeaderAccount
+- HeaderAccount-img
+- HeaderAccount-menu
+- HeaderAccount-wrapper
+- HeaderAccount-link
+- HeaderAccount-svg
+- HeaderAccount-cart
+*/
+
+.HeaderAccount{
+    width: 100%;
+    padding: 1.25rem 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.HeaderAccount-img{
+    width: 6.25rem;
+}
+.HeaderAccount-menu{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+}
+.HeaderAccount-wrapper{
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.HeaderAccount-link{
+    font-size: .875rem;
+    list-style: none;
+
+}
+.HaderAccount-svg{
+    position:relative;
+}
+.HeaderAccount-cart{
+    font-size: .625rem;
+    background-color: var(--color-orange);
+    padding: 0 4px;
+
+    position: absolute;
+    top: 2.1875rem;
+    right: 12%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.875rem;
+}
+
+/* HeaderAccount general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 768px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:768px){
+    .HeaderAccount{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        text-align: center;
+    }
+    .HeaderAccount-menu{
+        justify-content: center;
+        gap: .625rem;
+    }
+}
+
+@media (min-width:2000px){
+    .HeaderAccount{
+        max-width: 2400px;
+        margin: auto;
+    }
+}
+
+/* Responsive */

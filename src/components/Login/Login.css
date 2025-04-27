@@ -1,0 +1,115 @@
+/* 
+Login.css
+- Login general
+- Responsive
+*/
+
+/* Login general
+Descripción: estilos para el inicio de sesión
+Estructura: 
+- Login-login
+- Login-h2
+- Login-form
+- Login-label
+- Login-input
+- Login-input::placeholder
+- Login-button
+- Login-p--nouser
+*/
+
+.Login-login{
+    padding: 6.25rem 12.5rem;
+    border-bottom: 1rem solid var(--color-green);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Login-h2{
+    padding: 3.125rem 0 1.875rem 0;
+    color: var(--color-white);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+    width: 100%;
+    border-top-left-radius: 1.875rem;
+    border-top-right-radius: 1.875rem;
+    background-color: var(--color-green);
+    text-align: center;
+}
+.Login-form{
+    padding: 0 0 3.125rem 0;
+    width: 100%;
+    background-color: var(--color-green);
+    border-bottom-left-radius: var(--border-radius-container);
+    border-bottom-right-radius: var(--border-radius-container);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .3125rem;
+}
+.Login-label{
+    color: var(--color-white);
+    width: 75%;
+}
+.Login-input{
+    margin: 0 0 1.25rem 0;
+    width: 80%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-container);
+    padding: .9375rem 1.25rem;
+}
+.Login-input::placeholder{
+    color: #d8d8d8;
+}
+.Login-button{
+    margin: 1rem 0 0 0;
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+
+
+.Login-p--nouser{
+    color: red;
+    padding: 1.25rem 0 0 0;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight);
+}
+
+/* Login general*/
+
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:768px){
+    .Login-login{
+        padding: 4.375rem 1.25rem;
+    }
+}
+@media (max-width:960px){
+    .Login-login{
+        padding: 6.25rem 3.75rem;
+    }
+    .Login-h2, .Login-form{
+        width: 100%;
+    }
+
+}
+@media (min-width:2000px){
+    .Login{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */

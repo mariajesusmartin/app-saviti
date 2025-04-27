@@ -1,0 +1,94 @@
+/* 
+HowBuy.css
+- HowBuy general
+- Responsive
+*/
+
+/* HowBuy general
+Descripción: estilos para los pasos específicos para hacer un pedido
+Estructura: 
+- HowBuy
+- HowBuy-h2
+- HowBuy-ul
+- HowBuy-li
+- HowBuy-img
+- HowBuy-h3
+*/
+
+.HowBuy{
+    padding: 6.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+.HowBuy-h2{
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+.HowBuy-ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    gap: 1.875rem;
+    text-align: center;
+
+}
+.HowBuy-li{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;    
+}
+.HowBuy-img{ 
+    margin: auto;
+    width: 6.25rem;
+}
+.HowBuy-h3{
+    font-size: 1.125rem;
+    font-weight: var(--font-weight);
+}
+/* HowBuy general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .HowBuy{
+        padding: 4.375rem 3.125rem;
+    }
+    .HowBuy-h2{
+        font-size: var(--font-h-mobile);
+    }
+
+}
+@media (max-width:768px){
+    .HowBuy{
+        padding: 4.375rem 1.875rem;
+    }
+
+}
+@media (max-width:960px){
+    .HowBuy-ul{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (min-width:2000px){
+    .HowBuy{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */

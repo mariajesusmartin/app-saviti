@@ -1,0 +1,191 @@
+/* 
+Cart.css
+- CartCover general
+- CartInfo general
+- Responsive
+*/
+
+/* CartCover general
+Descripción: estilos para la portada de la página
+Estructura: 
+- CartCover
+- CartCover-img
+- CartCover-h1
+*/
+
+.CartCover{
+    position: relative;
+}
+
+.CartCover-img{
+    height: 40vh;
+    object-fit: cover;
+}
+.CartCover-h1{
+    padding: 6.25rem 3.125rem 0;
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+    position: absolute;
+    inset: 0;
+    text-align: center;
+}
+
+/* CartCover general*/
+
+/* CartInfo general
+Descripción: estilos para el carrito de la compra
+Estructura: 
+- CartInfo
+- CartInfo-container
+- CartInfo-selected
+- CartInfo-created
+- CartInfo-ul
+- CartInfo-li
+- CartInfo-info
+- CartInfo-form
+- CartInfo-names--grid
+- CartInfo-button
+- CartInfo-h4
+- CartInfo-h3
+- CartInfo-amount
+- CartInfo-buttons
+- CartInfo-button
+*/
+
+.CartInfo{
+    padding: 6.25rem 9.375rem;
+}
+.CartInfo-container{
+    border: 3px solid var(--color-green);
+    padding: 4.375rem;
+    border-radius: var(--border-radius-container);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.CartInfo-selected{
+    width: 100%;
+    border-bottom: 3px solid var(--color-green);
+    padding: 0 0 1.875rem 0;
+}
+.CartInfo-created{
+    width: 100%;
+    padding: 1.875rem 0 0;
+}
+.CartInfo-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.875rem;
+}
+.CartInfo-li{
+    width: 100%;
+}
+
+.CartInfo-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+}
+.CartInfo-form{
+    padding: 1.25rem 0 0 0 ;
+}
+.CartInfo-names--grid{
+    grid-column: span 2;
+}
+
+.CartInfo-button{
+    background-color: var(--color-white);
+}
+
+.CartInfo-h4{
+    font-weight: var(--font-weight);
+}
+.CartInfo-h3{
+    padding: 0 0 1.875rem 0;
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+}
+
+.CartInfo-amount{
+    text-align: center;
+}
+.CartInfo-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.CartInfo-button{
+    border: 2px solid var(--color-black);
+    padding: .3125rem 1rem;
+    border-radius: 1.25rem;
+}
+
+/* CartInfo general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .CartInfo{
+        padding: 4.375rem 1.875rem;
+    }
+    .CartInfo-container{
+        padding: 1.875rem;
+    }
+    .CartInfo-info{
+        grid-template-columns: 1fr;
+
+    }
+    .CartInfo-amount{
+        text-align: left;
+    }
+    .CartInfo-names--grid{
+        grid-column: span 1;
+    }
+    .CartInfo-li{
+        padding: 0 0 1.875rem 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.179);
+    }
+    .CartInfo-buttons{
+        justify-content: flex-start;
+    }
+    
+}
+
+@media (max-width:768px){
+    .CartCover-h1{
+        font-size: 2.1875rem;
+    }
+    .CartInfo{
+        padding: 6.25rem 3.125rem;
+    }
+}
+
+
+@media (min-width:2000px){
+    .CartCover, .CartInfo{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+
+}
+
+/* Responsive */
+
+

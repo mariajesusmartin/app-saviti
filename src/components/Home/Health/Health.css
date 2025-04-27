@@ -1,0 +1,106 @@
+/* 
+Health.css
+- Health general
+- Responsive
+*/
+
+/* Health general
+Descripción: estilos para la portada de la página "Inicio"
+Estructura: 
+- Health
+- Health-background
+- Health-img
+- Health-text
+- Health-h1
+- Health-a
+*/
+
+.Health{
+    position: relative;
+}
+.Health-background{
+    display: block;
+}
+.Health-img{
+    height: 80vh;
+    object-fit: cover;
+}
+.Health-text{
+    padding: 5rem 3.125rem 0 3.125rem;
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+.Health-h1{
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h1)
+}
+
+.Health-a{
+    padding: .625rem 2.5rem;
+    color: var(--color-white);
+    background-color:var(--color-green);
+    border-radius: 3.125rem;
+}
+
+/* Health general */
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con min-width 1600px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .Health-text{
+        padding: 3.125rem 1.25rem 0;
+    }
+    .Health-h1{
+        font-size: 1.875rem;
+        text-align: center;
+    }
+    .Health-img{
+        height:110vh;
+    }
+}
+
+@media (max-width:768px){
+    .Health-text{
+        padding: 3.125rem 3.125rem 0 3.125rem;
+        align-items: center;
+    }
+    .Health-h1{
+        text-align: center;
+        font-size: 2.1875rem;
+    }
+    .Health-p{
+        text-align: center;
+    }
+    .Health-img{
+        height:105vh;
+    }
+}
+
+@media (min-width:1600px){
+    .Health-img{
+        height:auto;
+    }
+}
+@media (min-width:2000px){
+    .Health{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+/* Responsive */
+

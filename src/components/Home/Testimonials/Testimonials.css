@@ -1,0 +1,108 @@
+/* 
+Testimonials.css
+- Testimonials general
+- Responsive
+*/
+
+/* Testimonials general
+Descripción: estilos para los testimonios de otros usuarios
+Estructura: 
+- Testimonials
+- Testimonials-h2
+- Testimonials-ul
+- Testimonials-li
+- Testimonials-note
+- Testimonials-img
+- Testimonials-name
+*/
+
+.Testimonials{
+    background-color: var(--color-beige);
+    padding: 6.25rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+}
+.Testimonials-h2{
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+
+.Testimonials-ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    gap: 3.125rem;
+}
+
+.Testimonials-li{
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-container);
+    padding: 1.875rem;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+}
+.Testimonials-note{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .625rem;
+}
+.Testimonials-img{
+    width: 40%;
+}
+.Testimonials-name{
+    font-weight: var(--font-weight);
+}
+/* Testimonials general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .Testimonials{
+        padding: 4.375rem 3.125rem;
+    }
+    .Testimonials-h2{
+        font-size: var(--font-h-mobile);
+    }
+}
+@media (max-width:768px){
+    .Testimonials{
+        text-align: center;
+    }
+    .Testimonials-li{
+        align-items: center;
+    }
+    .Testimonials-note{
+        justify-content: center;
+    }
+}
+@media (max-width:960px){
+    .Testimonials-ul{
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width:2000px){
+    .Testimonials{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}

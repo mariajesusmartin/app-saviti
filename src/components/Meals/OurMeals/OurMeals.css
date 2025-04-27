@@ -1,0 +1,143 @@
+/* 
+OurMeals.css
+- OurMeals general
+- Responsive
+*/
+
+/* OurMeals general
+Descripción: estilos para la lista de platos
+Estructura: 
+- Meals
+- Meals-h2
+- Meals-ul
+- Meals-li
+- Meals-img
+- Meals-details
+- Meals-h3
+- Meals-p
+- Meals-extra
+- Meals-allergens
+- Meals-allergen
+- Meals-icons
+- Meals-a
+- Meals-img--bottom
+*/
+
+.Meals{
+    padding: 6.25rem 9.375rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+
+}
+.Meals-h2{
+    text-align: center;
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+
+.Meals-ul{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;
+}
+.Meals-li{
+    border: 3px solid var(--color-green);
+    border-radius: 1.875rem;
+}
+.Meals-img{
+    border-top-left-radius: 1.75rem;
+    border-top-right-radius: 1.75rem;
+}
+
+.Meals-details{
+    padding: 1rem;
+}
+.Meals-h3{
+    font-weight: 700;
+}
+.Meals-p{
+    font-size: .875rem;
+}
+.Meals-extra{
+    padding: 1.25rem 0 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.Meals-allergens{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.Meals-allergen{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .625rem;
+}
+.Meals-icons{
+    width: 1.5625rem;
+}
+
+.Meals-a{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+
+.Meals-img--bottom{
+    border-radius: 0;
+}
+/* OurMeals general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas con max-width 960px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .Meals{
+        padding: 4.375rem 3.125rem;
+    }
+    .Meals-h2{
+        font-size: var(--font-h-mobile);
+    }
+
+}
+@media (max-width:768px){
+    .Meals{
+        padding: 4.375rem;
+    }
+    .Meals-ul{
+        grid-template-columns:1fr;
+    }
+
+}
+@media (max-width:960px){
+    .Meals-ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media (min-width:2000px){
+    .Meals{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */

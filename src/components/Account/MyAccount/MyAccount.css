@@ -1,0 +1,71 @@
+/* 
+MyAccount.css
+- MyAccount general
+- Responsive
+*/
+
+/* MyAccount general
+Descripción: estilos para la portada de la página "Mi cuenta"
+Estructura: 
+- MyAccount
+- MyAccount-img
+- MyAccount-h1
+*/
+
+.MyAccount{
+    position: relative;
+}
+
+.MyAccount-img{
+    height: 80vh;
+    object-fit: cover;
+}
+.MyAccount-h1{
+    padding: 6.25rem 3.125rem 0;
+    color: var(--color-green);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+    position: absolute;
+    inset: 0;
+    text-align: center;
+}
+
+/* MyAccount general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .MyAccount-h1{
+        padding: 3.125rem 1.25rem 0 1.25rem;
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width:768px){
+    .MyAccount-h1{
+        font-size: 2.1875rem;
+    }
+
+}
+
+@media (min-width:2000px){
+    .MyAccount{
+        max-width: 2400px;
+        margin: auto;
+    }
+    .MyAccount-img{
+        max-height: 50rem;
+    }
+
+}
+
+/* Responsive */
+
+
+

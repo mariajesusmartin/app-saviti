@@ -1,0 +1,91 @@
+/* reset general
+Descripción: estilos generales para toda la aplicación, relacionadas con textos, imagenes...
+Estructura:
+- *
+- li
+- h1 , h2 , h3 , h4
+- a
+- p, a
+- img , picture , video , svg
+- svg
+- html
+- :root
+- .Button
+- .Button:active
+- .ButtonForm:active
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    display: block;
+}
+p a{
+    display: inline;
+}
+img , picture , video , svg {
+    display: block;
+    width: 100%;
+    height: initial;
+}
+svg{
+    fill: currentColor;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    font-size: 100%;
+    /* ___Colores___ */
+    --color-green: #60B98C;    /*color corporativo principal*/
+    --color-beige: #FDEAE3;    /*color corporativo secundario*/
+    --color-orange: #FDD59D; /*color corporativo secundario*/
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    /* ___Tamaños tipografías___*/
+    --font-h1: 2.5rem;   /*tamaño para h1*/
+    --font-h: 1.875rem;     /*tamaño para otros h*/
+    --font-h-mobile: 1.5625rem; /*tamaño para otros h en responsive*/
+
+    /*___Grosor tipografías___*/
+    --font-weight: 700; /*grosor de tipografía para la negrita*/
+
+    /*___Border radius de botones y contenedores___*/
+    --border-radius-container: 1.875rem;  /*redondeo de bordes contendores de algo*/
+    --border-radius-button: 3.125rem;  /*redondeo de bordes para botones*/
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+.Button{
+    box-shadow: 2px 2px 5px rgb(138, 137, 137); /* Sombra para los botones */
+}
+
+.Button:active{
+    background-color: var(--color-green); /* Color de fondo para cuando un botón hace active*/
+
+}
+.ButtonForm:active{
+    background-color: var(--color-white); /* Color de fondo para cuando un botón hace active en formularios*/
+
+}
+
+
+

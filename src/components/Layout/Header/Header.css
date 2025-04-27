@@ -1,0 +1,76 @@
+/* 
+Header.css
+- Header general
+- Responsive
+*/
+
+/* Header general
+Descripción: estilos para el header general de la aplicación
+Estructura: 
+- Header
+- Header-img
+- Header-menu
+- Header-ul
+- Header-li
+- Header-li--login
+*/
+
+.Header{
+    width: 100%;
+    padding: 1.25rem 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-img{
+    width: 6.25rem;
+}
+
+.Header-menu{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+
+
+}
+.Header-ul{
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.Header-li{
+    font-size: .875rem;
+    list-style: none;
+}
+.Header-li--login{
+    background-color: var(--color-orange);
+    padding: .3125rem .9375rem;
+    border-radius: 1.25rem;
+}
+
+/* Header general */
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (min-width:2000px){
+    .Header{
+        max-width: 2400px;
+        margin: auto;
+    }
+}
+
+/* Responsive */

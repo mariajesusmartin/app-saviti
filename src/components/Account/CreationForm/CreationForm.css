@@ -1,0 +1,102 @@
+/* 
+CreationForm.css
+- CreationForm general
+- Responsive
+*/
+
+/* CreationForm general
+Descripción: estilos para el formulario de creación de plato
+Estructura: 
+- CreationForm
+- CreationForm-container
+- CreationForm-h3
+- CreationForm-form
+- CreationForm-label
+- CreationForm-input
+- CreationForm-input::placeholder
+- CreationForm-button
+*/
+
+.CreationForm{
+    padding: 0 9.375rem 6.25rem 9.375rem;
+
+}
+.CreationForm-container{
+    padding: 3.125rem 6.25rem;
+    background-color: var(--color-green);
+    border-radius: var(--border-radius-container);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.CreationForm-h3{
+    padding: 0 0 1.875rem 0;
+    color: var(--color-white);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+}
+.CreationForm-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    justify-content: center;
+    gap: .3125rem;
+
+}
+.CreationForm-label{
+    padding: 0 0 0 1.25rem;
+    color: var(--color-white);
+}
+.CreationForm-input{
+    margin: 0 0 1.25rem 0;
+    background-color: var(--color-white);
+    border-radius: 1.875rem;
+    padding: .9375rem 1.25rem;
+}
+.CreationForm-input::placeholder{
+    color: #d8d8d8;
+}
+
+.CreationForm-button{
+    text-align: center;
+    margin: 1rem auto;
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: 3.125rem;
+}
+
+/* CreationForm general*/
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:768px){
+    .CreationForm-container{
+        padding: 4.375rem 1.25rem;
+    }
+}
+@media (max-width:960px){
+    .CreationForm-container{
+        padding: 2.5rem 3.75rem;
+    }
+    .CreationForm-h2, .CreationForm-form{
+        width: 100%;
+    }
+
+}
+@media (min-width:2000px){
+    .CreationForm, .CreationForm-img{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */

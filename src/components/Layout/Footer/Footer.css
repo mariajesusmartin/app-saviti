@@ -1,0 +1,77 @@
+/* 
+Footer.css
+- Footer general
+- Footer mobile
+- Responsive
+*/
+
+/* Footer general
+Descripción: estilos para el footer general
+Estructura: 
+- Footer
+- Footer-span--phone
+- Footer-img
+*/
+
+.Footer{
+    padding: 4.375rem 3.125rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Footer-span--phone{
+    text-align: right;
+}
+
+.Footer-img{
+    width: 6.25rem;
+}
+
+/* Footer general */
+
+/* Footer mobile 
+Descripción: estilos para el footer mobile
+Estructura: 
+- FooterMobile
+*/
+
+.FooterMobile{
+    display: none;
+}
+
+/* Footer mobile */
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media(max-width:480px){
+    .Footer{
+        display: none;
+    }
+    .FooterMobile{
+        padding: 4.375rem 3.125rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .FooterMobile-img{
+        width: 7.5rem;
+        padding: 0 0 1.25rem 0;
+    }
+}
+
+@media (min-width:2000px){
+    .Footer{
+        max-width: 2400px;
+        margin: auto;
+    }
+}
+
+/* Responsive*/

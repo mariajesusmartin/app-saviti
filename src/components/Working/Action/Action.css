@@ -1,0 +1,84 @@
+/* 
+Action.css
+- Action general
+- Responsive
+*/
+
+/* Action general
+Descripción: estilos la sección de botones de acción desde la página "Cómo funciona"
+Estructura: 
+- Action
+- Action-h2
+- Action-ul
+- Action-a
+*/
+
+.Action{
+    text-align: center;
+    padding: 6.25rem  3.125rem;
+    background-color: var(--color-green);
+}
+.Action-h2{
+    padding: 0 0 3.125rem 0;
+    color: var(--color-white);
+    font-weight: var(--font-weight);
+    font-size: var(--font-h);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.Action-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+.Action-a{
+    padding: .625rem 2.5rem;
+    background-color:var(--color-orange);
+    border-radius: var(--border-radius-button);
+}
+
+/* Action general */
+
+/* Responsive
+Descripción: estilos para adaptar el contenido a responsive
+Estructura: 
+- Pantallas con max-width 480px
+- Pantallas con max-width 768px
+- Pantallas grandes con min-width 2000px
+*/
+
+@media (max-width:480px){
+    .Action{
+        padding: 4.375rem 1.875rem;
+    }
+    .Action-h2{
+        font-size: var(--font-h-mobile);
+    }
+    .Action-ul{
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+}
+@media (max-width:768px){
+    .Action{
+        padding: 4.375rem 2.5rem;
+    }
+
+}
+
+
+@media (min-width:2000px){
+    .Action{
+        max-width: 2400px;
+        margin: auto;
+    }
+
+}
+
+/* Responsive */
