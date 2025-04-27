@@ -25,8 +25,8 @@ const Easy =()=>{
             {/* Imagen de fondo */}
             <div className="Easy-background">
                 <picture>
-                <source srcSet="/public/assets/main-images/bol-de-ensalada.webp" type="image/jpg"/>
-                <img src="/public/assets/main-images/bol-de-ensalada.jpg" alt="Imagen de fondo con un bol de ensalada" className="Easy-img" />
+                <source srcSet="/assets/main-images/bol-de-ensalada.webp" type="image/jpg"/>
+                <img src="/assets/main-images/bol-de-ensalada.jpg" alt="Imagen de fondo con un bol de ensalada" className="Easy-img" />
                 </picture>
             </div>
             {/* Título */}

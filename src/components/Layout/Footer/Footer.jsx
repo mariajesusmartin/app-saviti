@@ -31,7 +31,7 @@ const Footer =()=>{
             {/* Copyright */}
             <span className="Footer-span">Copyright 2025</span>
             {/* Imagen logo */}
-            <img src="././public/assets/saviti.png" alt="logotipo de saviti" className="Footer-img" />
+            <img src="/assets/saviti.png" alt="logotipo de saviti" className="Footer-img" />
             {/* Contacto */}
             <span className="Footer-span Footer-span--phone">900 000 000</span>
         </div>
@@ -49,7 +49,7 @@ const FooterMobile =() =>{
         <>
         <div className="FooterMobile">
             {/* Imagen logo */}
-            <img src="././public/assets/saviti.png" alt="logotipo de saviti" className="FooterMobile-img" />
+            <img src="/assets/saviti.png" alt="logotipo de saviti" className="FooterMobile-img" />
             {/* Contacto */}
             <span className="FooterMobile-span">900 000 000</span>
             {/* Copyright */}

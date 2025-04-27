@@ -30,7 +30,7 @@ const HeaderAccount = () =>{
             <div className="HeaderAccount-logo">
                 {/* Imagen del logo */}
                 <a href={'/'} className="HeaderAccount-a">
-                    <img src="././public/assets/saviti.png" alt="logotipo de saviti" className='HeaderAccount-img'/>
+                    <img src="/assets/saviti.png" alt="logotipo de saviti" className='HeaderAccount-img'/>
                 </a>
             </div>
             <div className='HeaderAccount-menu'>

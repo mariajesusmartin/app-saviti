@@ -82,8 +82,8 @@ const Login =()=>{
         <div className="Login">
             {/* Imagen de portada */}
             <picture>
-                <source srcSet="/public/assets/main-images/alimentos-en-una-mesa-02.webp" type="image/jpg"/>
-                <img src="/public/assets/main-images/alimentos-en-una-mesa-02.jpg" alt="Imagen de alimentos sobre una mesa" className="Login-img" />
+                <source srcSet="/assets/main-images/alimentos-en-una-mesa-02.webp" type="image/jpg"/>
+                <img src="/assets/main-images/alimentos-en-una-mesa-02.jpg" alt="Imagen de alimentos sobre una mesa" className="Login-img" />
             </picture>
             {/* Formulario de inicio de sesión */}
             <div className="Login-login">

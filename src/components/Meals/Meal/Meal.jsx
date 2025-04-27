@@ -24,8 +24,8 @@ const Meal = ()=>{
         <div className="Meal">
             {/* Imagen de fondo */}
             <div className="Meal-background">
-                <source srcSet="/public/assets/main-images/plato-con-tosta.webp" type="image/jpg"/>
-                <img src="/public/assets/main-images/plato-con-tosta.jpg" alt="Background" className="Meal-img" />
+                <source srcSet="/assets/main-images/plato-con-tosta.webp" type="image/jpg"/>
+                <img src="/assets/main-images/plato-con-tosta.jpg" alt="Background" className="Meal-img" />
             </div>
             {/* Título */}
             <h1 className="Meal-h1">Decir <span className='Meal-italic'>“Qué como hoy”</span> será cosa del pasado</h1>

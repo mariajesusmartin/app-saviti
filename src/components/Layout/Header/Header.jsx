@@ -30,7 +30,7 @@ const Header = () =>{
             <div className="Header-logo">
                 {/* Imagen del logo */}
                 <a href={'/'} className="Header-a">
-                    <img src="././public/assets/saviti.png" alt="logotipo de saviti" className='Header-img'/>
+                    <img src="/assets/saviti.png" alt="logotipo de saviti" className='Header-img'/>
                 </a>
             </div>
             <div className='Header-menu'>

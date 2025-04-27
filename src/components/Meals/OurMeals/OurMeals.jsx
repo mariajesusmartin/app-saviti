@@ -78,8 +78,8 @@ const OurMeals =()=>{
         </div>
         {/* Imagen final */}
         <picture>
-            <source srcSet="/public/assets/main-images/alimentos-en-una-mesa.webp" type="image/jpg"/>
-            <img src="/public/assets/main-images/alimentos-en-una-mesa.jpg" alt="Imagen de alimentos sobre una mesa" className="Meals-img Meals-img--bottom" />
+            <source srcSet="/assets/main-images/alimentos-en-una-mesa.webp" type="image/jpg"/>
+            <img src="/assets/main-images/alimentos-en-una-mesa.jpg" alt="Imagen de alimentos sobre una mesa" className="Meals-img Meals-img--bottom" />
         </picture>
         </>
     )
