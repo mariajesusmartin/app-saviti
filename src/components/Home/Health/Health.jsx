@@ -10,6 +10,7 @@
 *_______________________________*/
 
 import './Health.css'
+import { NavLink } from 'react-router-dom'
 
 /**
  * Este componente muestra la portada de la página "Inicio"
@@ -34,7 +35,7 @@ const Health = () => {
                     <h1 className="Health-h1">Gana salud, vida y tiempo</h1>
                     <p className="Health-p">Sabemos lo valioso que es tu tiempo y no queremos que lo pierdas. En saviti te lo ponemos fácil para que comas sano sin cocinar.</p>
                     <div className="Health-button">
-                        <a href={'/nuestros-platos'} title="Ir a la página de nuestros platos" className="Health-a Button">Conoce nuestros platos</a>
+                        <button className="Health-a Button" title="Ir a la página de nuestros platos"><NavLink to={'/nuestros-platos'}>Conoce nuestros platos</NavLink></button>
                     </div>
                 </div>
             </div>

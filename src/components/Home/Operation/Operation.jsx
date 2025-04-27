@@ -73,7 +73,7 @@ const Operation =()=>{
                 </ul>
                 {/* Botón que redirige a la página "Nuestros-platos" */}
                 <div className="Operation-button">
-                    <a href={'/nuestros-platos'} title="Ir a la página de nuestros platos" className="Operation-a Button">Nuestros platos</a>
+                    <button className="Health-a Button" title="Ir a la página de nuestros platos"><NavLink to={'/nuestros-platos'}>Nuestros platos</NavLink></button>
                 </div>
             </div>
         </>
