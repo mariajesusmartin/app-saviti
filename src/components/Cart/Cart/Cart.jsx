@@ -36,10 +36,8 @@ import UpdateForm from '../UpdateForm/UpdateForm'
 // Componente principal para renderizar el carrito de la compra
 const Cart =()=>{
 
-    // Importación de variables de entorno
-    const API_URL = `${import.meta.env.VITE_API}/meals`
     // Función para variable de entorno con parámetros
-    const baseUrlUserMeals = import.meta.env.VITE_USERMEALS
+    const baseUrlUserMeals = import.meta.env.VITE_API
 
     // useState para manejar el estado del plato en proceso de edición
     const [editingMeal, setEditingMeal] = useState(null)
@@ -63,13 +61,15 @@ const Cart =()=>{
 
     // Función para obtener todos los platos creados por el usuario desde la API
     const getCreatedMeal =async()=>{
+
+        const urlMeals = `${baseUrlUserMeals}/meals`
         let controller = new AbortController()
         let options ={
             method: 'get',
             signal: controller.signal
         }
 
-        await fetch(API_URL, options)
+        await fetch(urlMeals, options)
         .then(res => res.json())
         .then(data =>setCreatedMeals(data))
         .catch(err=>console.log(err))
@@ -83,7 +83,7 @@ const Cart =()=>{
     */
     const deleteCreatedMeal = async(id)=>{
 
-        const urlUserMealsId = `${baseUrlUserMeals}${id}`
+        const urlMealsId = `${baseUrlUserMeals}/user-meals/${id}`
 
         let controller = new AbortController()
         let options = {
@@ -91,7 +91,7 @@ const Cart =()=>{
           signal: controller.signal
         }
     
-        await fetch(urlUserMealsId, options)
+        await fetch(urlMealsId, options)
         .then (res => res.json())
         .then(data => setCreatedMeals(data))
         .catch(err=>console.log(err))
@@ -134,7 +134,7 @@ const Cart =()=>{
             amount: Number(amountInput.value)
         }
 
-        const urlUserMealsId = `${baseUrlUserMeals}${update.id}`
+        const urlMealsId = `${baseUrlUserMeals}/user-meals/${update-id}`
 
         let controller = new AbortController()
         let options = {
